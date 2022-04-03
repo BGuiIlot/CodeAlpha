@@ -1,0 +1,47 @@
+<%- include('header.ejs') %>
+
+    <div class="container-fluid d-flex align-items-center flex-column">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Identité</th>
+                    <th>Code</th>
+                    <th>Salle</th>
+                    <th>Date</th>
+                    <th>Heure d'entrée prévue</th>
+                    <th>Heure d'entrée Réelle</th>
+                    <th>Heure de sortie Réelle</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% Interventions.forEach(function(entry) { %>
+                    <tr>
+                        <td>
+                            <%= entry.identite %>
+                        </td>
+                        <td>
+                            <%= entry.code %>
+                        </td>
+                        <td>
+                            <%= entry.salle %>
+                        </td>
+                        <td>
+                            <%= new Date(entry.heureDebutPrevu).getDate()+'-'+(new
+                                Date(entry.heureDebutPrevu).getMonth()+1)+'-'+new
+                                Date(entry.heureDebutPrevu).getFullYear();%>
+                        </td>
+                        <td>
+                            <%= new Date(entry.heureDebutPrevu).getHours()+' h '+new Date(entry.heureDebutPrevu).getMinutes();%>
+                        </td>
+                        <td>
+                            <%= new Date(entry.heureEntreeReelle).getHours()+' h '+new Date(entry.heureEntreeReelle).getMinutes();%>
+                        </td>
+                        <td>
+                            <%= new Date(entry.heureSortieReelle).getHours()+' h '+new Date(entry.heureSortieReelle).getMinutes();%>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+    </div>
