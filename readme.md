@@ -82,7 +82,7 @@ Pour finir, lancer votre projet avec la commande :
 
 | Verbe |          Adresse          |    Contrôleur/Méthode    |                           Utilité                            |
 | :---: | :-----------------------: | :----------------------: | :----------------------------------------------------------: |
-| POST  | localhost:3000/api/update | update(codeIntervention) | Reçoit l’heure d’entrée réel ainsi que l’heure de sortie réel. |
+| PATCH | localhost:3000/api/update | update(codeIntervention) | Reçoit l’heure d’entrée réel ainsi que l’heure de sortie réel. |
 
 ## *Modèle pour la collection intervenants*
 
